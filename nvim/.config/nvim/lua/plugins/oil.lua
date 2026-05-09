@@ -13,7 +13,7 @@ return {
 			vim.keymap.set("n", "<space>-", require("oil").toggle_float),
 
 			view_options = {
-				show_hidden = false,
+				show_hidden = true,
 			},
 
 			win_options = {
