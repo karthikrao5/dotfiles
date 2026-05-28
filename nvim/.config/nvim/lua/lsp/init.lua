@@ -1,4 +1,4 @@
-local servers = { "luals" }
+local servers = { "luals", "tsls" }
 
 -- =========================================
 --  Autocompletion (nvim-cmp) ΓÇö must come BEFORE LSP config
