@@ -1,5 +1,3 @@
-require("core.lsp")
-require("core.options")
-require("config.autocmds")
-require("core.lazy")
-require("core/keymap")
+require('plugins')
+require('lsp')
+require('config.autocmds')
