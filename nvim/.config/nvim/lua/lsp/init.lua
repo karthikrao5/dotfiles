@@ -1,17 +1,4 @@
-local servers = { "luals", "tsls" }
 
--- =========================================
---  Autocompletion (nvim-cmp) ΓÇö must come BEFORE LSP config
--- =========================================
-local cmp = require("cmp")
+local capabilities = require("blink.cmp").get_lsp_capabilities()
+vim.lsp.config("*", { capabilities = capabilities })
 
-
-for _, server in ipairs(servers) do
-  local cfg = require("lsp.servers." .. server)
-  local capabilities = require("cmp_nvim_lsp").default_capabilities() -- Γ£à Now safe to call
-
-  vim.lsp.config(server, vim.tbl_deep_extend('force', cfg, {
-    capabilities = capabilities
-  }))
-  vim.lsp.enable(server)
-end
